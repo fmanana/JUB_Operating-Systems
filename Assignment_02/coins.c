@@ -169,24 +169,24 @@ int main(int argc, char *argv[])
         {
             case 'n':
             {
-                if (optarg < 0)
+                N = atoi(optarg);
+                if (N < 0)
                 {
                     perror("Invalid -n argument");
                     exit(EXIT_FAILURE);
                 }
                 // Update the number of flips if specified
-                N = atoi(optarg);
                 break;
             }
             case 'p':
             {
-                if(optarg < 0)
+                P = atoi(optarg);
+                if(P < 0)
                 {
                     perror("Invalid -p argument");
                     exit(EXIT_FAILURE);
                 }
                 // Update the number of threads if specified
-                P = atoi(optarg);
                 break;
             }
             default:
